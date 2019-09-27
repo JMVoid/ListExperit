@@ -3,25 +3,67 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.CommandWpf;
 using ListExperit.Model;
 
 namespace ListExperit.ViewModel
 {
-    public class StudentViewModel : ViewModelBase
+    public class StudentViewModel : BasePage
     {
 
+        private StudentModel _studentModel;
         public StudentViewModel() {
-            if (IsInDesignMode)
-            {
-                StudentModel = new StudentModel() { Id = 1, Name = "John" };
+            //GuiConfigLocator locator = (GuiConfigLocator)Application.Current.Resources["Locator"];
+            //MainViewModel m = locator.Main;
+            //if (IsInDesignMode)
+            //{
+            //    StudentModel = new StudentModel() { Id = locator.LocalSocks , Name = locator.LocalHttp.ToString() };
+            //}
+            //else
+            //{
+            //    StudentModel = new StudentModel() { Id = locator.LocalHttp , Name = locator.LocalSocks.ToString() };
+            //}
 
-            }
-            else {
-                StudentModel = new StudentModel() { Id = 2, Name = "smith" };
-            }
+            //this.ParentViewModel = locator.Main;
+            //this.ParentViewModel.CurrentPage = this;
         }
 
-        public StudentModel StudentModel { get; set; }
+        public StudentModel StudentModel
+        {
+            get
+            {
+                ViewModelLocator locator = (ViewModelLocator)Application.Current.Resources["Locator"];
+                MainViewModel mainViewModel = locator.Main;
+                _studentModel = mainViewModel.Student;
+                return _studentModel;
+            }
+            set
+            {
+                _studentModel = value;
+            }
+        }
+        //private RelayCommand _switchCmd;
+        //public RelayCommand SwitchCmd
+        //{
+        //    get
+        //    {
+        //        if (_switchCmd == null) return new RelayCommand(() => ExecuteCmd());
+        //        return SwitchCmd;
+        //    }
+        //    set
+        //    {
+        //        _switchCmd = value;
+        //    }
+        //}
+
+        //private void ExecuteCmd()
+        //{
+        //    NodeListViewModel nodeLsitViewModel = ((ViewModelLocator)Application.Current.Resources["Locator"]).NodeList;
+        //    ((MainViewModel)this.ParentViewModel).CurrentPage = nodeLsitViewModel;
+        //}
+
     }
+
 }

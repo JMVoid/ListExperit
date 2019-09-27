@@ -32,20 +32,19 @@ namespace ListExperit.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DesignDataService>();
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view services and models
-            ////    SimpleIoc.Default.Register<IDataService, DataService>();
-            ////}
-
+            //if (ViewModelBase.IsInDesignModeStatic)
+            //{
+            //    // Create design time view services and models
+            //    SimpleIoc.Default.Register<IDataService, DesignDataService>();
+            //}
+            //else
+            //{
+            //    // Create run time view services and models
+            //    SimpleIoc.Default.Register<IDataService, DataService>();
+            //}
             SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<StudentViewModel>();
-            SimpleIoc.Default.Register<NodeListViewModel>();
+            //SimpleIoc.Default.Register<StudentViewModel>();
+            //SimpleIoc.Default.Register<NodeListViewModel>();
         }
 
         public MainViewModel Main
@@ -56,17 +55,17 @@ namespace ListExperit.ViewModel
             }
         }
 
-        public StudentViewModel Student {
-            get  {
-                return ServiceLocator.Current.GetInstance<StudentViewModel>();
-            }
-        }
+        //public StudentViewModel Student {
+        //    get  {
+        //        return ServiceLocator.Current.GetInstance<StudentViewModel>();
+        //    }
+        //}
 
-        public NodeListViewModel NodeList {
-            get {
-                return ServiceLocator.Current.GetInstance<NodeListViewModel>();
-            }
-        }
+        //public NodeListViewModel NodeList {
+        //    get {
+        //        return ServiceLocator.Current.GetInstance<NodeListViewModel>();
+        //    }
+        //}
         
         public static void Cleanup()
         {

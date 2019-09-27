@@ -76,8 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\GuiConfig.cs" />
     <Compile Include="Model\Node.cs" />
     <Compile Include="Model\StudentModel.cs" />
+    <Compile Include="ViewModel\BasePage.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NodeListViewModel.cs" />
     <Compile Include="ViewModel\StudentViewModel.cs" />
@@ -88,8 +90,8 @@
     <Compile Include="View\NodeListPage.xaml.cs">
       <DependentUpon>NodeListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\StudnentPage.xaml.cs">
-      <DependentUpon>StudnentPage.xaml</DependentUpon>
+    <Compile Include="View\StudentPage.xaml.cs">
+      <DependentUpon>StudentPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -111,7 +113,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\StudnentPage.xaml">
+    <Page Include="View\StudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

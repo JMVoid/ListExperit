@@ -7,14 +7,19 @@ using GalaSoft.MvvmLight;
 using ListExperit.Model;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.CommandWpf;
+using System.Windows;
 
 namespace ListExperit.ViewModel
 {
-    public class NodeListViewModel : ViewModelBase
+    public class NodeListViewModel :  BasePage
     {
 
         public NodeListViewModel()
         {
+
+            //ViewModelLocator locator = (ViewModelLocator)Application.Current.Resources["Locator"];
+            //this.ParentViewModel = locator.Main;
+
             if (IsInDesignMode)
             {
                 NodeListModel = new ObservableCollection<Node>()
@@ -46,13 +51,13 @@ namespace ListExperit.ViewModel
 
         public ObservableCollection<Node> NodeListModel { get; set; }
 
-        private RelayCommand _editNodeCmd;
+        //private RelayCommand _editNodeCmd;
 
-        public RelayCommand EditNodeCmd{
-            get {
-                if (_editNodeCmd == null) return new RelayCommand(() => )
-            }
-        }
+        //public RelayCommand EditNodeCmd{
+        //    get {
+        //        if (_editNodeCmd == null) return new RelayCommand(() => )
+        //    }
+        //}
 
     }
 }

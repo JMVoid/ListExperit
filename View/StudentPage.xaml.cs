@@ -19,11 +19,17 @@ namespace ListExperit.View
     /// <summary>
     /// Interaction logic for StudnentPage.xaml
     /// </summary>
-    public partial class StudnentPage : UserControl
+    public partial class StudentPage : UserControl
     {
-        public StudnentPage()
+        public StudentPage()
         {
             InitializeComponent();
+            //this.DataContext =
+            // ViewModelLocator locator = (ViewModelLocator)Application.Current.Resources["Locator"];
+            //if (locator != null) {
+            //    this.DataContext = locator.Student;
+            //}
         }
+
     }
 }
