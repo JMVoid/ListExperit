@@ -37,45 +37,11 @@ namespace ListExperit.ViewModel
 
             }
         }
-        private GuiConfig _guiConfig;
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
-            ObservableCollection<Node> nodeList = new ObservableCollection<Model.Node>()
-            {
-                    new Node() {Activate=true, NodeAddr="hk01f.bitstunnel.online", NodePort=10080, NodeGroup="bitstunnel"},
-                    new Node() {Activate=false, NodeAddr="hk02f.bitstunnel.online", NodePort= 7071, NodeGroup="bitstunnel"}
-             };
 
-            StudentModel studentModel = new StudentModel() { Id = 1, Name = "John" };
+        }
 
-            _guiConfig = new GuiConfig()
-            {
-                LocalSocks = 7071,
-                LocalHttp = 7072,
-                Index = 1,
-                LogLevel = "Warning",
-                NodeList = nodeList,
-                StudentModel = studentModel
-            };
-            this.CurrentPage = new StudentViewModel();
-        }
-        public StudentModel Student {
-            get
-            {
-                return _guiConfig.StudentModel;
-            }
-            set {
-                _guiConfig.StudentModel = value;
-            }
-        }
 
 
     }

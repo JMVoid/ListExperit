@@ -29,7 +29,7 @@
         <StackPanel  Orientation="Vertical">
             <ContentControl x:Name="mainPage" Content="{Binding CurrentPage}">
             </ContentControl>
-            <TextBlock Text="Here TextBlock"></TextBlock>
+            <!--<TextBlock Text="Here TextBlock"></TextBlock>-->
         </StackPanel>
 
     </Grid>

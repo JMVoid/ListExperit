@@ -80,6 +80,7 @@
     <Compile Include="Model\Node.cs" />
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="ViewModel\BasePage.cs" />
+    <Compile Include="ViewModel\GuiConfigViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NodeListViewModel.cs" />
     <Compile Include="ViewModel\StudentViewModel.cs" />

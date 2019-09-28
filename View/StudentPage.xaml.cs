@@ -24,11 +24,6 @@ namespace ListExperit.View
         public StudentPage()
         {
             InitializeComponent();
-            //this.DataContext =
-            // ViewModelLocator locator = (ViewModelLocator)Application.Current.Resources["Locator"];
-            //if (locator != null) {
-            //    this.DataContext = locator.Student;
-            //}
         }
 
     }
